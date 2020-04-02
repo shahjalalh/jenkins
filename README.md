@@ -58,7 +58,7 @@ $
 $
 ```
 
-Installing Docker and Python inside Jenkins-Docker container:
+**Installing Docker, Python and NodeJS inside Jenkins-Docker container:**
 ```
 shahjalal:~$ sudo docker ps
 [sudo] password for shahjalal: 
@@ -81,6 +81,13 @@ Python 3.5.3 (default, Sep 27 2018, 17:25:39)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 jenkins@aecd1036dcc0:/$
+jenkins@bafca3e9a9f8:/$ node -v
+v10.14.1
+jenkins@bafca3e9a9f8:/$ npm -v
+6.4.1
+jenkins@bafca3e9a9f8:/$ yarn -v
+1.12.3
+jenkins@bafca3e9a9f8:/$
 ```
 
 Browse to http://localhost:8099/
