@@ -2,6 +2,7 @@ version: "3.7"
 services:
   jenkins:
     container_name: sh_jenkins
+    image: shahjalalh/jenkins:0.1
     build: 
       context: .
       dockerfile: Dockerfile

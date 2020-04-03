@@ -3,7 +3,7 @@
 
 ```
 $ mkdir jenkins_home
-$ docker-compose up
+$ docker-compose up --build
 # or,
 $ docker-compose up -d
 $ docker-compose ps
