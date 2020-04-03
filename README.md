@@ -58,7 +58,7 @@ $
 $
 ```
 
-**Installing Docker, Python and NodeJS inside Jenkins-Docker container:**
+**Installing Docker, Python and NodeJS inside Jenkins-Docker image:**
 ```
 shahjalal:~$ sudo docker ps
 [sudo] password for shahjalal: 
