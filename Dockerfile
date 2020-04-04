@@ -88,4 +88,19 @@ RUN set -ex \
   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz
 
+# Installing PIP and Virtual Environment
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+RUN python get-pip.py
+RUN python3 get-pip.py
+
+RUN pip install virtualenv
+
+# Creating environment for developer
+RUN mkdir /home/workspace
+
+# sudo permission for jenkins user
+RUN chown 1000:1000 /home/workspace -R
+RUN apt-get -y install sudo
+RUN usermod -aG sudo jenkins
+
 USER jenkins

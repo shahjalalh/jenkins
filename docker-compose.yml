@@ -2,7 +2,7 @@ version: "3.7"
 services:
   jenkins:
     container_name: sh_jenkins
-    image: shahjalalh/jenkins:0.1
+    image: shahjalalh/jenkins:0.2
     build: 
       context: .
       dockerfile: Dockerfile
@@ -10,6 +10,7 @@ services:
       - "8099:8080"
     volumes: 
       - "./jenkins_home:/var/jenkins_home"
+      # - "/project/location:/home/workspace/project_env_name/project_name"
     networks:
       - net
 networks:
