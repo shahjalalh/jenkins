@@ -60,34 +60,34 @@ $
 
 **Installing Docker, Python and NodeJS inside Jenkins-Docker image:**
 ```
-shahjalal:~$ sudo docker ps
-[sudo] password for shahjalal: 
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                               NAMES
-aecd1036dcc0        jenkins_jenkins     "/sbin/tini -- /usr/…"   2 minutes ago       Up 2 minutes        50000/tcp, 0.0.0.0:8099->8080/tcp   sh_jenkins
-shahjalal:~$ sudo docker exec -it sh_jenkins bash
-jenkins@aecd1036dcc0:/$ docker --version
+shahjalal:jenkins$ docker ps
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                               NAMES
+f43bd906815e        shahjalalh/jenkins:0.3   "/sbin/tini -- /usr/…"   24 seconds ago      Up 20 seconds       50000/tcp, 0.0.0.0:8099->8080/tcp   sh_jenkins
+shahjalal:jenkins$ docker exec -it sh_jenkins bash
+jenkins@f43bd906815e:/$ docker --version
 Docker version 19.03.8, build afacb8b7f0
-jenkins@aecd1036dcc0:/$ docker-compose --version
+jenkins@f43bd906815e:/$ docker-compose --version
 docker-compose version 1.25.4, build 8d51620a
-jenkins@aecd1036dcc0:/$
-jenkins@aecd1036dcc0:/$ python
+jenkins@f43bd906815e:/$ 
+jenkins@f43bd906815e:/$ python
 Python 2.7.13 (default, Sep 26 2018, 18:42:22) 
 [GCC 6.3.0 20170516] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
-jenkins@aecd1036dcc0:/$ python3
+jenkins@f43bd906815e:/$ python3
 Python 3.5.3 (default, Sep 27 2018, 17:25:39) 
 [GCC 6.3.0 20170516] on linux
 Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
-jenkins@aecd1036dcc0:/$
-jenkins@bafca3e9a9f8:/$ node -v
-v10.14.1
-jenkins@bafca3e9a9f8:/$ npm -v
-6.4.1
-jenkins@bafca3e9a9f8:/$ yarn -v
-1.12.3
-jenkins@bafca3e9a9f8:/$
+jenkins@f43bd906815e:/$ node -v
+v12.16.1
+jenkins@f43bd906815e:/$ npm -v
+6.13.4
+jenkins@f43bd906815e:/$ yarn -v
+1.22.0
+jenkins@f43bd906815e:/$ exit
+exit
+shahjalal:jenkins$
 ```
 
 Browse to http://localhost:8099/
