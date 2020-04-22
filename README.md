@@ -1,5 +1,6 @@
 # Jenkins installation with Docker
 
+Repo in docker hub: https://hub.docker.com/repository/docker/shahjalalh/jenkins
 
 ```
 $ mkdir jenkins_home
